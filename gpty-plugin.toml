@@ -1,0 +1,14 @@
+# gpty plugin manifest — validated by the gpty CLI at install time.
+id = "godot-pty/gpty-agent-workspace"
+name = "Agent Workspace"
+version = "0.1.0"
+min_gpty_version = "0.5.5"
+platforms = ["linux", "macos", "windows"]
+
+[[profiles]]
+name = "Agent Workspace"
+tiles = [
+  { col = 0, row = 0, cspan = 35, rspan = 60, settings = { type = "terminal", pane_name = "Agent Terminal", attachment_id = "omp-terminal" } },
+  { col = 35, row = 0, cspan = 25, rspan = 30, settings = { type = "inspector", pane_name = "Inspector", attachment_id = "omp-inspector", backend = "omp" } },
+  { col = 35, row = 30, cspan = 25, rspan = 30, settings = { type = "reasoning", pane_name = "Reasoning", attachment_id = "omp-reasoning", source_attachment_id = "omp-terminal" } },
+]
